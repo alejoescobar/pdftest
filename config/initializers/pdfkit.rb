@@ -8,7 +8,7 @@ PDFKit.configure do |config|
   else
     raise "Unsupported. Must be running linux or intel-based Mac OS."
   end
-  config.wkhtmltopdf = Rails.root.join('vendor', 'bin', wkhtmltopdf_executable).to_s
+  config.wkhtmltopdf = Rails.root.join('vendor', 'wkhtmltopdf-amd64').to_s
 end
 config.root_url = "http://localhost" # Use only if your external hostname is unavailable on the server.
 end
