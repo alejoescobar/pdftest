@@ -4,11 +4,12 @@ PDFKit.configure do |config|
   if RUBY_PLATFORM =~ /linux/
     wkhtmltopdf_executable = 'wkhtmltopdf-amd64'
   elsif RUBY_PLATFORM =~ /darwin/
-    wkhtmltopdf_executable = '/Users/alejandro/.rvm/gems/ruby-1.9.3-p484/bin/wkhtmltopdf'
+    wkhtmltopdf_executable = '/Users/alejandro/Projects/pdftest/pdftest/bin/wkhtmltopdf'
   else
     raise "Unsupported. Must be running linux or intel-based Mac OS."
   end
-  config.wkhtmltopdf = Rails.root.join('vendor', 'wkhtmltopdf-amd64').to_s
+  # config.wkhtmltopdf = Rails.root.join('vendor', 'wkhtmltopdf-amd64').to_s
+  config.wkhtmltopdf = wkhtmltopdf_executable
 end
 config.root_url = "http://localhost" # Use only if your external hostname is unavailable on the server.
 end
